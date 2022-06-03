@@ -7,6 +7,6 @@
  */
 int main(void)
 {
-	printf("Holberton School\n");
+	printf("Holberton SchoolGCC\n");
 	return (0);
 }
