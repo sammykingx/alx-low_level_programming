@@ -2,18 +2,18 @@
 
 /**
  * main - Entry point
- * author: sammykingx
- * Return: Always 0 (Success)
+ *
+ * Return: Always 0 (Success/correct)
  */
 int main(void)
 {
-	char sam;
-	char kingx;
+	char c;
+	char d;
 
-	for (; sam <= 'z'; sam++)
-		putchar(sam);
-	for (; kingx <= 'Z'; kingx++)
-		putchar(kingx);
+	for (c = 'a'; c <= 'z'; c++)
+		putchar(c);
+	for (d = 'A'; d <= 'Z'; d++)
+		putchar(d);
 	putchar('\n');
 	return (0);
 }
