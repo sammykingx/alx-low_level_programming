@@ -1,4 +1,4 @@
-#include <stdio,h>
+#include <stdio.h>
 #include "main.h"
 /**
  * rev_string - This function reverses a string and prints on the stdout
