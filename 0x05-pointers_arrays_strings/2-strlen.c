@@ -5,7 +5,7 @@
  * _strlen - Function for counting the length of string
  * @s: a pointer for counting the strting lenth
  * Author: Sammykingx
- * Return 0 success.
+ * Return i success.
 */
 
 int _strlen(char *s)
