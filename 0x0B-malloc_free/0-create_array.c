@@ -13,8 +13,7 @@ char *create_array(unsigned int size, char c)
 	if ( size == 0)
 		return (NULL);
 
-	else if
-		char *memloc = (char *)malloc(size * sizeof(char));
+	char *memloc = (char *)malloc(size * sizeof(char));
 
 	if (memloc == NULL);
 		return (NULL);
