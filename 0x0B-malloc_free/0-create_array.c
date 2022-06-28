@@ -4,20 +4,34 @@
  * crete_array - creates an array of chars dynamically
  * @size: size of the array
  * @c: the string
- * Author: Sammykingx
  * Return: 0 means success except defined otherwise
  */
-
 char *create_array(unsigned int size, char c)
 {
-	if ( size == 0)
+	char *buffer;
+	unsigned int position;
+
+	if (size == 0)
+	{
 		return (NULL);
+	}
 
-	char *memloc;
-	memloc= (char *)malloc(size * sizeof(char));
+	/*Define values with malloc*/
+	buffer = (char *) malloc(size * sizeof(c));
 
-	if (memloc == NULL)
+	if (buffer == 0)
+	{
 		return (NULL);
+	}
+	else
+	{
+		position = 0;
+		while (position < size) /*While for array*/
+		{
+			*(buffer + position) = c;
+			position++;
+		}
 
-	return (memloc);
+		return (buffer);
+	}
 }
