@@ -9,9 +9,6 @@
  */
 void *malloc_checked(unsigned int b)
 {
-	if (b == NULL)
-		return (1);
-
 	void* ptr;
 
 	ptr = malloc(b);
