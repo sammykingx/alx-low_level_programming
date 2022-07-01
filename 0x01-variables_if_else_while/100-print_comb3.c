@@ -1,32 +1,27 @@
 #include <stdio.h>
 /**
- * main - Entry point
+ * main - program compilation begins from main
+ * Description: Program to print all possible combinations of numbers
+ with no two numbers same in pairing
  * author: sammykingx
- * Return: Always 0 (Success)
+ * Return: 0 means success
  */
-
 int main(void)
 {
-	int a;
-	int j;
+        int a, b;
 
-	for (a = 48; a < 58; a++)
-	{
-		for (j = 48; j < 58; j++)
-		{
-			if (a != j && a < j)
-			{
-				putchar(a);
-				putchar(j);
-				if (j == 57 && a == 56)
-				{
-					break;
-				}
-				putchar(',');
-				putchar(' ');
-			}
-		}
-	}
-	putchar('\n');
-	return (0);
+        for (a = 48; a <=57; a++)
+        {
+                for (b = 49; b <= 57; b++)
+                {
+                        if ( a != b && b > a)
+                        {
+                                putchar(a);
+                                putchar(b);
+                                putchar(',');
+                        }
+                }
+        }
+        putchar('\n');
+        return (0);
 }
