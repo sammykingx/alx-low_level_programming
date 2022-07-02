@@ -1,29 +1,20 @@
 #include "main.h"
-
 /**
- * print_last_digit - last digit
- *
- * @n: The int to print
- * Return: Always 0.
- */
-
-int print_last_digit(int n)
-
+ * print_last_digit - prints the last digits of any number
+ * @a: the int value to be acted upon
+ * author: sammykingx
+ * Return: returns the last digit to calling function
+*/
+int print_last_digit(int a)
 {
-	int last_digit;
-
-	if (n < 0)
+	if (a >= 0 && a <= 9)
 	{
-		last_digit = (-1 * (n % 10));
-		_putchar (last_digit + '0');
-		return (last_digit);
+		printf("in if\n");
+		return (a);
 	}
-
 	else
 	{
-		last_digit = (n % 10);
-		_putchar (last_digit + '0');
-		return (last_digit);
+		a = _abs(a % 10);
+		return (a);
 	}
-
 }
