@@ -8,10 +8,8 @@
 int print_last_digit(int a)
 {
 	if (a >= 0 && a <= 9)
-	{
-		printf("in if\n");
 		return (a);
-	}
+
 	else
 	{
 		a = _abs(a % 10);
