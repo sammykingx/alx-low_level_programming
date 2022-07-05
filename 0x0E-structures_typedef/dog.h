@@ -1,5 +1,6 @@
-#ifndef _DOG_H_
-#define _DOG_H_
+#ifndef DOG_H
+#define DOG_H
+
 /**
  * struct dog - creating a user-defined struct dog data type
  * @name: to rep name
@@ -7,12 +8,14 @@
  * @owner: to rep owner
  * author: Sammykingx
  */
+
 struct dog
 {
 	char *name;
 	float age;
 	char *owner;
 };
+
 typedef struct dog dog_t
 void init_dog(struct dog *d, char *name, float age, char *owner);
 void print_dog(struct dog *d);
