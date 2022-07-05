@@ -6,7 +6,6 @@
  * @age: to rep the age
  * @owner: to rep owner
  * author: Sammykingx
- * Return: O if SUCCESSFUL
  */
 struct dog
 {
