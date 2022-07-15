@@ -9,9 +9,6 @@ size_t print_list(const list_t *h)
 {
 	size_t nodelen;
 
-	if (h == NULL)
-		return (1);
-
 	travnode = 0;
 	while (h != NULL)
 	{
