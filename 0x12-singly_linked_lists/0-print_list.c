@@ -10,10 +10,10 @@ size_t print_list(const list_t *h)
 	size_t nodelen;
 	list_t *trevnode;
 
-	if (!(h))
+	if (h == NULL)
 		return (1);
 
-	else if (!(h->str))
+	else if (h->str == NULL)
 		printf("[0] (nil)\n");
 
 	else
@@ -22,7 +22,7 @@ size_t print_list(const list_t *h)
 	nodelen = 0;
 	trevnode = h;
 
-	while (!(trevnode))
+	while (trevnode != NULL)
 	{
 		trevnode = h->next;
 		nodelen++;
