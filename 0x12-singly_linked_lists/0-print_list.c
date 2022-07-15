@@ -8,25 +8,19 @@
 size_t print_list(const list_t *h)
 {
 	size_t nodelen;
-	list_t *trevnode;
 
 	if (h == NULL)
 		return (1);
 
-	else if (h->str == NULL)
-		printf("[0] (nil)\n");
-
-	else
-		printf("[%lu] %s\n", h->len, h->str);
-
-	nodelen = 0;
-	trevnode = h;
-
-	while (trevnode != NULL)
+	travnode = 0;
+	while (!(h))
 	{
-		trevnode = h->next;
+		if(!(h->str))
+			printf("[0] (nil)"\n);
+		else
+			printf("[%lu] %s\n", h->len, h->str);
+		h = h->next;
 		nodelen++;
 	}
-
 	return (nodelen);
 }
