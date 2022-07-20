@@ -4,6 +4,7 @@
  * at a given position
  * @head: pointer to the first node in the list
  * @idx: index where the new node is to be added
+ * 0 = 1st, 1 = 2nd, 2 = 3rd etc for the index.
  * @n: data to insert in the new node
  * Return: pointer to the new node, or NULL
  */
@@ -24,20 +25,13 @@ listint_t *insert_nodeint_at_index(listint_t **head, unsigned int idx, int n)
 	{
 		new->next = *head;
 		*head = new;
-		return (new);
 	}
 
-	for (i = 0; temp && i < idx; i++)
-	{
-		if (i == idx - 1)
-		{
-			new->next = temp->nex;
-			temp->next = new;
-			return (new);
-		}
-		else
-			temp = temp->next;
-	}
+	for (i = 0; i < idx; i++)
+		temp = temp->next;
 
-	return (NULL);
+	 new->next = temp;
+	 head->next = new;
+
+	return (new);
 }
