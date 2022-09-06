@@ -19,4 +19,15 @@
         `gcc -Wall -Werror - Wextra -pedantic -std=gnu89 -c -fpic <filename>.c`
 
 * Now compile the object file to link with shared library function
-`gcc <filename>.o -L. -l<libraryname> -o <outputfilename>{it's optional doh}`
+`gcc <filename>.o -L. -l<libraryname> -o <outputfilename>`
+	{it's optional doh}
+
+### Alternative way to creating your dynamic Library
+* Create all .c file/s
+* Compile them this way to create the shared library
+	`gcc -Wall -Werror -Wextra -pedantic -std=gnu89 -fpic *.c -shared -o lib<library_name>
+
+### Using the shared library to compile files
+* Create the c file/s
+* Compile them this way
+`gcc -Wall -Werror -Wextra -pedantic -fpic <*.c or c_file_name.c> -L. -l<libname> -o <exe_filename>`
